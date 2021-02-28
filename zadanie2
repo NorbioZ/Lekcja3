@@ -1,0 +1,165 @@
+package com.company;
+
+import java.util.Scanner;
+import java.util.Arrays;
+
+
+public class Main {
+
+
+    public static int[] get_tab()
+    {
+        Scanner scan = new Scanner(System.in);
+
+
+        int L = 1;
+
+        System.out.println ( "Wielkość tablicy:" );
+
+        int wielkość_norbert;
+
+        wielkość_norbert = scan.nextInt();
+
+        System.out.println( "Twoja wartość:" );
+
+        int liczba;
+
+        liczba = scan.nextInt();
+
+        int[] tab = new int[ wielkość_norbert ];
+
+        tab[0] = liczba;
+
+        while ( L < wielkość_norbert )
+
+        {
+            for ( int K = 1;K < wielkość_norbert * wielkość_norbert; K++ )
+
+            {
+
+                if (( K > liczba ) && (K > tab [ L-1 ]) && (K % 2 == 0 ))
+
+                {
+
+                    tab[L] = K;
+
+                    L++;
+
+                    break;
+                }
+            }
+        }
+
+        return tab;
+    }
+    public static int minimum( int [] tab )
+
+    {
+        int minimum = tab[0];
+
+        for ( int m: tab )
+
+        {
+            if (m < minimum )
+
+            {
+                minimum = m;
+            }
+        }
+
+        return minimum;
+    }
+    public static int maximum( int [] tab )
+    {
+        int maximum = tab [0];
+
+        for (int M: tab )
+        {
+
+            if (M > maximum  )
+            {
+                maximum = M;
+
+            }
+        }
+
+        return maximum;
+
+    }
+    public static int wynik( int [] tab )
+
+    {
+        int wynik = 0;
+
+        for (int w: tab )
+
+        {
+
+            wynik += w;
+
+        }
+
+        return wynik;
+
+    }
+
+    public static double średnia( int [] tab)
+
+    {
+
+        double wynik = 0;
+
+        for (double W: tab)
+
+        {
+
+            wynik += W;
+        }
+        return wynik / tab.length;
+    }
+
+    public static int mediana( int [] tab )
+
+    {
+        Arrays.sort( tab );
+
+        int mediana = 0;
+
+        if (tab.length % 2 == 0)
+
+
+        {
+
+            int F = tab[(tab.length / 2) - 1], G = tab [( tab.length / 2 )];
+
+            mediana = (F + G) / 2;
+
+        }
+        else
+
+        {
+            mediana = tab [( tab.length / 2)];
+        }
+
+        return mediana;
+    }
+
+    public static void main (String[] args)
+
+    {
+        int[] tab = get_tab ();
+
+        System.out.println("Wynik tablicy to " + Arrays.toString (tab));
+//a
+        System.out.println("Najmniejsza wartość to " + minimum(tab));
+//b
+        System.out.println("Największa wartość to " + maximum (tab));
+//c
+        System.out.println("Suma wartości to " + wynik (tab));
+//d
+        System.out.println("średnia wartości to " + średnia (tab));
+//e
+        System.out.println("Mediana wartości to " + mediana (tab));
+    //Norbert Kulik
+    }
+}
