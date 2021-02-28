@@ -1,0 +1,70 @@
+package com.company;
+
+import java.util.Scanner;
+import java.util.Arrays;
+
+
+public class Main {
+
+
+    public static int[] NorbertKulik()
+    {
+        Scanner scannner = new Scanner(System.in);
+        
+        System.out.println("Wielkość tablic: ");
+
+        int nor;
+
+        nor = scannner.nextInt();
+
+        int[] tab1 = new int[nor];
+        
+
+        int[] tab2 = new int[nor];
+        
+
+        int[] tab3 = new int[nor];
+
+        
+        for (int L = 0; L < nor; L++)
+
+        
+        {
+            System.out.println("Liczba pierwszej tablicy : " + L + " ");
+
+
+            tab1[L] = scannner.nextInt();
+        }
+
+
+        for (int L = 0; L < nor; L++)
+
+
+
+        {
+
+            System.out.println("Liczba drugiej tablicy : " + L + "");
+            
+            tab2[L] = scannner.nextInt();
+        }
+
+        for (int L = 0; L < nor; L++)
+
+
+        {
+
+            tab3[L] = tab1[L] + tab2[L];
+
+        }
+
+        return tab3;
+        
+    }
+
+    public static void main(String[] args)
+
+    {
+        System.out.println("Wynik" + Arrays.toString(NorbertKulik()));
+    }
+    //Norbert Kulik
+}
