@@ -1,0 +1,50 @@
+package com.company;
+
+public class Main {
+
+
+    public static int Zadanie5(int nor, int bert)
+
+    {
+
+        while (nor != bert)
+
+        {
+
+
+            if (nor > bert)
+
+
+            {
+
+
+                nor -= bert;
+
+
+            }
+
+            else
+
+            {
+
+                bert -= nor;
+
+
+            }
+
+        }
+        return nor;
+    }
+
+    public static void main(String[] args)
+
+
+    {
+
+
+        System.out.println("Wynik :" + Zadanie5(12, 14));
+
+    //Norbert Kulik
+    }
+
+}
