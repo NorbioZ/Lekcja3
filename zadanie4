@@ -1,0 +1,65 @@
+package com.company;
+
+public class Main {
+
+
+    public static int[][] NK(){
+        int U = 12;
+
+
+        int[][] NK = new int[U][U];
+
+
+
+        for (int L = 0; L < U; L++)
+
+        {
+
+            for (int K = 0; K < U; K++)
+
+
+            {
+
+                NK[L][K] = L+K;
+
+            }
+
+
+        }
+
+
+        return NK;
+    }
+
+
+    public static void main(String[] args)
+
+    {
+
+        int[][] NK = NK();
+
+
+        for (int F = 0; F < NK.length; F++)
+
+        {
+
+            for (int T = 0; T <NK.length; T++)
+
+            {
+
+
+                System.out.print(NK[F][T]+ " ");
+            }
+
+
+
+            System.out.println("");
+
+
+        //Norbert Kulik
+        }
+
+
+    }
+
+}
