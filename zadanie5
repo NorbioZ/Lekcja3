@@ -3,22 +3,22 @@ package com.company;
 public class Main {
 
 
-    public static int Zadanie5(int nor, int bert)
+    public static int Zadanie5(int liczba1, int liczba2)
 
     {
 
-        while (nor != bert)
+        while (liczba1 != liczba2)
 
         {
 
 
-            if (nor > bert)
+            if (liczba1 > liczba2)
 
 
             {
 
 
-                nor -= bert;
+                liczba1 -= liczba2;
 
 
             }
@@ -27,13 +27,13 @@ public class Main {
 
             {
 
-                bert -= nor;
+                liczba2 -= liczba1;
 
 
             }
 
         }
-        return nor;
+        return liczba1;
     }
 
     public static void main(String[] args)
@@ -44,7 +44,7 @@ public class Main {
 
         System.out.println("Wynik :" + Zadanie5(10, 15));
 
-    //Norbert Kulik
+        //Norbert Kulik
     }
 
 }
